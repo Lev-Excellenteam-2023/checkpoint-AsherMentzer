@@ -2,6 +2,6 @@
 
 int main() {
 	read_from_file();
-	//print_school();
+	print_school();
 	school_free();
 }

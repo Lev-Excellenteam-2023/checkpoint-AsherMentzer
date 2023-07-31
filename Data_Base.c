@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Data_base.h"
 #include <stdio.h>
 
@@ -11,11 +12,7 @@ void read_from_file()
     const char* mode = "r";
     char line[300];
     char* token;
-    if (fopen_s(&file, filename, mode) != 0) {
-        printf("Failed to open the file.\n");
-        return 1;
-    }
-   
+    file = fopen(filename, "r");
     //Check if the file was opened successfully
     if (file == NULL) {
         printf("Error opening the file.\n");
@@ -29,20 +26,20 @@ void read_from_file()
         int grades[NUM_OF_GRADES];
         int level;
         int class_num;
-        char* context = NULL;
+        //char* context = NULL;
         //Use strtok to split the line into individual strings based on spaces
-        token = strtok_s(line, ", ",&context);
-        strcpy_s(fname, sizeof(fname), token);
-        token = strtok_s(NULL, ", ", &context);
-        strcpy_s(lname, sizeof(lname), token);
-        token = strtok_s(NULL, ", ", &context);
-        strcpy_s(phone, sizeof(phone), token);
-        token = strtok_s(NULL, ", ", &context);
+        token = strtok(line, " ");
+        strcpy(fname, token);
+        token = strtok(NULL, " ");
+        strcpy(lname,token);
+        token = strtok(NULL, " ");
+        strcpy(phone, token);
+        token = strtok(NULL, " ");
         level = atoi(token);
-        token = strtok_s(NULL, ", ", &context);
+        token = strtok(NULL, " ");
         class_num = atoi(token);
         for (int i = 0; i < NUM_OF_GRADES; ++i) {
-            token = strtok_s(NULL, ", ", &context);
+            token = strtok(NULL, " ");
             int grade = atoi(token);
             grades[i] = grade;
         }

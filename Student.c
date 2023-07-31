@@ -1,12 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Student.h"
 
 Student* student_create( char* fname,  char* lname, char* phone ,int* grades)
 {
 	Student* student = (Student*) malloc(sizeof(Student));
-
-	strcpy_s(student->fname, sizeof(student->fname), fname);
-	strcpy_s(student->lname, sizeof(student->lname), lname);
-	strcpy_s(student->phone, sizeof(student->phone), phone);
+	strcpy(student->fname, fname);
+	strcpy(student->lname,  lname);
+	strcpy(student->phone,  phone);
 	
 	for (int i = 0; i < NUM_OF_GRADES; ++i) {
 		student->grades[i] = grades[i];
