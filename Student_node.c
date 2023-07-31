@@ -1,6 +1,6 @@
 #include "Student_node.h"
 
-void printList(StudentNode** head) {
+void printList(StudentNode* head) {
 	StudentNode* p = head;
 	printf("\n[");
 
@@ -13,15 +13,14 @@ void printList(StudentNode** head) {
 }
 //insertion at the beginning
 void insertatbegin(StudentNode** head, Student* newStudent) {
-
 	StudentNode* newNode;
 	newNode = (StudentNode*)malloc(sizeof(StudentNode));
-	newNode->current = newStudent;
+	(Student*)newNode->current = newStudent;
 	newNode->next = *head;
 	*head = newNode;
 }
 
-void free_list(StudentNode** head)
+void free_list(StudentNode* head)
 {
 	 StudentNode* current = head;
 	 StudentNode* next;

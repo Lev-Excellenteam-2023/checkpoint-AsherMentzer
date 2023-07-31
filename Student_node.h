@@ -12,11 +12,11 @@ typedef struct studentNode {
 
 
 // display the list
-void printList(StudentNode** head);
+void printList(StudentNode* head);
 
 //insertion at the beginning
 void insertatbegin(StudentNode** head, Student* student);
 
-void free_list(StudentNode** head);
+void free_list(StudentNode* head);
 
 #endif
