@@ -16,7 +16,7 @@ void read_from_file()
     //Check if the file was opened successfully
     if (file == NULL) {
         printf("Error opening the file.\n");
-        return 1;
+        return;
     }
     // Read each line from the file
     while (fgets(line, sizeof(line), file) != NULL) {

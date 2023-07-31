@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Student.h"
+#include <stdio.h>
 
 Student* student_create( char* fname,  char* lname, char* phone ,int* grades)
 {
