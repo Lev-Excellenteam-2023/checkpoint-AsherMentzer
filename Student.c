@@ -5,6 +5,10 @@
 Student* student_create( char* fname,  char* lname, char* phone ,int* grades)
 {
 	Student* student = (Student*) malloc(sizeof(Student));
+	if (student == NULL) {
+		printf("Memory allocation failed.\n");
+		return NULL;
+	}
 	strcpy(student->fname, fname);
 	strcpy(student->lname,  lname);
 	strcpy(student->phone,  phone);

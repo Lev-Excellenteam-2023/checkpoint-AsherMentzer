@@ -13,11 +13,19 @@ void printList(StudentNode* head) {
 }
 //insertion at the beginning
 void insertatbegin(StudentNode** head, Student* newStudent) {
-	StudentNode* newNode;
-	newNode = (StudentNode*)malloc(sizeof(StudentNode));
-	(Student*)newNode->current = newStudent;
+	if (head == NULL) {
+		printf("Error: Invalid head pointer.\n");
+		return;
+	}
+	StudentNode* newNode = (StudentNode*)malloc(sizeof(StudentNode));
+	if (newNode == NULL) {
+		printf("Memory allocation failed.\n");
+		return;
+	}
+	newNode->current = newStudent;
 	newNode->next = *head;
 	*head = newNode;
+	
 }
 
 void free_list(StudentNode* head)
