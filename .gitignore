@@ -5,3 +5,9 @@
 \out
 .vs
 x64/
+CheckPoint.sln
+CheckPoint.vcxproj
+CheckPoint.vcxproj.filters
+CheckPoint.vcxproj.user
+Student_list.c
+Students_list.h
