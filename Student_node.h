@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STUDENTS_NODE_H // Include guard to prevent multiple inclusions
+#define STUDENTS_NODE_H
+
 #include "Student.h"
 #include <stdio.h>
 
@@ -16,3 +18,5 @@ void printList(StudentNode** head);
 void insertatbegin(StudentNode** head, Student* student);
 
 void free_list(StudentNode** head);
+
+#endif

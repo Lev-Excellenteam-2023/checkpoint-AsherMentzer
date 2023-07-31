@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STUDENTS_H // Include guard to prevent multiple inclusions
+#define STUDENTS_H
+
 #include <stdlib.h>
 #include<string.h>
 
@@ -24,3 +26,4 @@ void student_free(Student* student);
 
 void print_student(Student* student);
 
+#endif
