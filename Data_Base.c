@@ -65,7 +65,15 @@ void print_school() {
 void school_free() {
     for (int level_num = 0; level_num < NUM_OF_LEVELS; ++level_num) {
         for (int class_num = 0; class_num < NUM_OF_CLASS; ++class_num) {
-            free_list(school[level_num][class_num]);
+            //free_list(school[level_num][class_num]);
+            StudentNode* current = school[level_num][class_num];
+            while (current != NULL) {
+                StudentNode* temp = current;
+                current = current->next;
+                free(temp->current);
+                free(temp);
+
+            }
         }
     }
 }
