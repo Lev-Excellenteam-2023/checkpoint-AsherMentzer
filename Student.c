@@ -24,11 +24,20 @@ void student_free(Student* student)
 	free(student);
 }
 
+int student_avg_grades(Student* student)
+{
+	int sumOfGrades = 0;
+	for (int i = 0; i < NUM_OF_GRADES; ++i) {
+		sumOfGrades += student->grades[i];
+	}
+	return sumOfGrades / NUM_OF_GRADES;
+}
+
 void print_student(Student* student)
 {
-	printf("name: %s%s ,phone: %s ", student->fname, student->lname, student->phone);
+	printf("name: %s %s phone: %s ", student->fname, student->lname, student->phone);
 	for (int i = 0; i < NUM_OF_GRADES; ++i) {
-		printf("%d", student->grades[i]);
+		printf("%d ", student->grades[i]);
 	}
 	printf("\n");
 }

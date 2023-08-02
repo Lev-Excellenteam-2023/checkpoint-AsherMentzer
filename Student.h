@@ -23,7 +23,7 @@ Student* student_create(char* fname,char* lname, char* phone,int* grades);
 
 void student_free(Student* student);
 
-
+int student_avg_grades(Student* student);
 void print_student(Student* student);
 
 #endif

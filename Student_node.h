@@ -19,4 +19,14 @@ void insertatbegin(StudentNode** head, Student* student);
 
 void free_list(StudentNode* head);
 
+// Function to delete a node from the linked list
+void deleteNode(struct StudentNode** head, struct StudentNode* nodeToDelete);
+
+// Function to find and return the node with a specific value
+StudentNode* findNodeByPhone(StudentNode** head, char* phone_num);
+
+// Function to find and return the node with a specific value
+StudentNode* findNodeByName(StudentNode** head, char* fname, char* lname);
+
+
 #endif

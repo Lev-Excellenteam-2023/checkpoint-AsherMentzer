@@ -44,7 +44,7 @@ void read_from_file()
             grades[i] = grade;
         }
         Student* newStudent = student_create(fname, lname, phone, grades);
-        insertatbegin(&school[level-1][class_num-1], newStudent);;
+        insertatbegin(&school[level-1][class_num-1], newStudent);
 
 
     }
