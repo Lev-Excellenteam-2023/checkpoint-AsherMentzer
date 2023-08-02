@@ -45,7 +45,7 @@ void free_list(StudentNode* head)
 }
 
 // Function to delete a node from the linked list
-void deleteNode( StudentNode** head,  StudentNode* nodeToDelete) {
+void deleteNode(StudentNode** head, StudentNode* nodeToDelete) {
 	if (*head == NULL || nodeToDelete == NULL) {
 		return; // Empty list or invalid nodeToDelete
 	}
