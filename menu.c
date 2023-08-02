@@ -16,6 +16,7 @@ void printTopNStudentsPerCourse();
 void printUnderperformedStudents();
 int findLowestIndex(StudentNode** topN, int n, int course_num);
 void printAverage();
+void handleClosing();
 
 enum menu_inputs {
     Insert = '0',
@@ -80,7 +81,7 @@ void menu() {
                 //exportDatabase();
                 break;
             case Exit:
-                //handleClosing();
+                handleClosing();
                 break;
             default:
                 printf("\nThere is no item with symbol \"%c\".Please enter a number between 1-10!\nPress any key to continue...",
@@ -97,7 +98,7 @@ int main() {
     read_from_file();
     //print_school();
     menu();
-    school_free();
+    //school_free();
     return 0;
 }
 
@@ -348,4 +349,8 @@ int findLowestIndex(StudentNode** topN,int n,int course_num) {
         }
     }
     return lowestIndex;
+}
+
+void handleClosing() {
+    school_free();
 }
